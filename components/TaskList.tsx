@@ -10,19 +10,20 @@ import React, { useState } from "react";
 import TaskListItem from "./TaskListItem";
 
 export interface Task {
+    id: string;
   description: string;
 }
 
 const TaskList = () => {
   const [tasks, setTasks] = useState<Task[]>([
-    { description: "First item" },
-    { description: "Second item" },
+    { id: "12", description: "First item" },
+    { id: "123", description: "Second item" },
   ]);
 
   const [newTask, setNewTask] = useState("");
 
   const createTask = () => {
-    setTasks([...tasks, { description: newTask }]);
+    setTasks([...tasks, { description: newTask, id: Math.random().toString() }]);
     setNewTask("");
   };
   return (
