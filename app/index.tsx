@@ -1,21 +1,16 @@
-import TaskList from "@/components/TaskList";
-import TaskListItem from "@/components/TaskListItem";
+import TaskBoard from "@/components/TaskBoard";
 import { StyleSheet, Text, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
   return (
-    <SafeAreaView
-      style={styles.container}
-    >
-      <TaskList/>
-    </SafeAreaView>
+    <View style={styles.container}>
+      <TaskBoard />
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 10
-  }
-})
+  },
+});
